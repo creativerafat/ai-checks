@@ -1,0 +1,172 @@
+/**
+ * Section: main — VANTA — SS26 Atelier
+ * Source Frame: main — VANTA — SS26 Atelier
+ * DesignKoro Project ID: file-1793804223377
+ * Generated Date: 2026-11-25T12:49:09.684Z
+ * How to use: Import styles/tokens.css before styles/section.css if you want standalone CSS custom properties.
+ */
+
+:root {
+  /* ---------- Colors ---------- */
+  --brand-name: REDUNOM;
+  --brand-tagline: The Complete Guide;
+  --primary: #0D6EFD;
+  --secondary: #6C757D;
+  --accent: #4F46E5;
+  --text: #0F172A;
+  --muted: #475569;
+  --background: #FFFFFF;
+  --surface: #F8FAFC;
+  --border: #E2E8F0;
+  --success: #198754;
+  --warning: #FFC107;
+  --error: #DC2626;
+  --transparent: #FFFFFF00;
+  --sm: 0 2px 6px 0 rgba(15, 23, 42, 0.06);
+  --md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --lg: 0 20px 40px -10px rgba(15, 23, 42, 0.14);
+  --soft-surface-radial: radial-gradient(at center center, #FFFFFF 0%, #F8FAFC 100%);
+  --danger: #DC3545;
+  --info: #0DCAF0;
+  --light: #F8F9FA;
+  --dark: #212529;
+  --white: #FFFFFF;
+  --black: #000000;
+  --body-bg: #FFFFFF;
+  --body-color: #212529;
+  --border-color: #DEE2E6;
+  --link-color: #0D6EFD;
+  --link-hover-color: #0A58CA;
+  --navbar-brand-font-size: 20px;
+  --social-background: #090D16;
+  --social-surface: #131C31;
+  --social-accent: #F43F5E;
+  --social-ink: #F8FAFC;
+
+  /* ---------- Typography ---------- */
+  --font-name: Plus Jakarta Sans;
+  --secondary-body-font: Inter;
+  --body-l: Plus Jakarta Sans · 18px / 400 / 1.6em;
+  --body-m: Plus Jakarta Sans · 16px / 400 / 1.55em;
+  --body-s: Plus Jakarta Sans · 14px / 400 / 1.5em;
+  --body-l-18px: 20px;
+  --body-m-16px: 16px;
+  --body-s-14px: 14px;
+  --btn-font-size-sm: 14px;
+  --btn-font-size-lg: 20px;
+  --form-label-font-size: 14px;
+  --font-sans: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-2: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-3: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+
+  /* ---------- Spacing ---------- */
+  --display: Plus Jakarta Sans · 60px / 800 / 1.08em;
+  --h1: Plus Jakarta Sans · 48px / 800 / 1.12em;
+  --h2: Plus Jakarta Sans · 36px / 700 / 1.18em;
+  --h3: Plus Jakarta Sans · 28px / 700 / 1.25em;
+  --h4: Plus Jakarta Sans · 22px / 600 / 1.3em;
+  --caption: Plus Jakarta Sans · 12px / 500 / 1.4em;
+  --button: Plus Jakarta Sans · 15px / 600 / 1.2em;
+  --display-60px: 80px;
+  --h1-xl-54px: 48px;
+  --h1-48px: 40px;
+  --h2-36px: 32px;
+  --h3-28px: 28px;
+  --h4-22px: 24px;
+  --h5-20px: 20px;
+  --button-15px: 16px;
+  --caption-12px: 12px;
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --boxed-standard-1280px: 1280px;
+  --boxed-compact-1140px: 1140px;
+  --boxed-wide-1440px: 1440px;
+  --hug-content-auto: 0px;
+  --section-sm-360px: 360px;
+  --section-md-520px: 520px;
+  --hero-lg-680px: 680px;
+  --screen-100vh: 100px;
+  --pill: 999px;
+  --border-0: 0px;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-4: 4px;
+  --border-8: 8px;
+  --none: none;
+  --slate-midnight: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+  --multi-stop-aurora-3-stops: linear-gradient(90deg, #0066FF 0%, #4F46E5 50%, #16A34A 100%);
+  --h6: 16px;
+  --display-2: 72px;
+  --display-3: 64px;
+  --display-4: 56px;
+  --display-6: 40px;
+  --p: 16px;
+  --micro: 10px;
+  --fs-1: 40px;
+  --fs-2: 32px;
+  --fs-3: 28px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+  --p-0: 0px;
+  --p-1: 4px;
+  --p-2: 8px;
+  --p-3: 16px;
+  --p-4: 24px;
+  --p-5: 48px;
+  --m-0: 0px;
+  --m-1: 4px;
+  --m-2: 8px;
+  --m-3: 16px;
+  --m-4: 24px;
+  --m-5: 48px;
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 16px;
+  --gap-4: 24px;
+  --gap-5: 48px;
+  --spacer: 16px;
+  --social-headline: MEET YOUR NEW OBSESSION;
+  --social-offer: $5.99;
+  --social-cta: GET EARLY ACCESS →;
+  --space-10: 10px;
+  --space-18: 18px;
+  --space-20: 20px;
+
+  /* ---------- Radii ---------- */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --rounded-none: 0px;
+  --rounded-sm: 2px;
+  --rounded: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 12px;
+  --rounded-xl: 16px;
+  --rounded-2xl: 24px;
+  --rounded-full: 9999px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+
+  /* ---------- Shadows ---------- */
+  --primary-glow: linear-gradient(135deg, #0066FF 0%, #4F46E5 100%);
+}

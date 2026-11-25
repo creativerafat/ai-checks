@@ -1,0 +1,2161 @@
+/**
+ * Section: main — VANTA — SS26 Atelier
+ * Source Frame: main — VANTA — SS26 Atelier
+ * DesignKoro Project ID: file-1793804223377
+ * Generated Date: 2026-11-25T12:49:09.684Z
+ * How to use: Link in index.html (<link rel="stylesheet" href="styles/section.css" />) or import into your bundler.
+ */
+
+/* ========================================================================== */
+/* 1. Tokens                                                                  */
+/* ========================================================================== */
+:root {
+  /* ---------- Colors ---------- */
+  --brand-name: REDUNOM;
+  --brand-tagline: The Complete Guide;
+  --primary: #0D6EFD;
+  --secondary: #6C757D;
+  --accent: #4F46E5;
+  --text: #0F172A;
+  --muted: #475569;
+  --background: #FFFFFF;
+  --surface: #F8FAFC;
+  --border: #E2E8F0;
+  --success: #198754;
+  --warning: #FFC107;
+  --error: #DC2626;
+  --transparent: #FFFFFF00;
+  --sm: 0 2px 6px 0 rgba(15, 23, 42, 0.06);
+  --md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --lg: 0 20px 40px -10px rgba(15, 23, 42, 0.14);
+  --soft-surface-radial: radial-gradient(at center center, #FFFFFF 0%, #F8FAFC 100%);
+  --danger: #DC3545;
+  --info: #0DCAF0;
+  --light: #F8F9FA;
+  --dark: #212529;
+  --white: #FFFFFF;
+  --black: #000000;
+  --body-bg: #FFFFFF;
+  --body-color: #212529;
+  --border-color: #DEE2E6;
+  --link-color: #0D6EFD;
+  --link-hover-color: #0A58CA;
+  --navbar-brand-font-size: 20px;
+  --social-background: #090D16;
+  --social-surface: #131C31;
+  --social-accent: #F43F5E;
+  --social-ink: #F8FAFC;
+
+  /* ---------- Typography ---------- */
+  --font-name: Plus Jakarta Sans;
+  --secondary-body-font: Inter;
+  --body-l: Plus Jakarta Sans · 18px / 400 / 1.6em;
+  --body-m: Plus Jakarta Sans · 16px / 400 / 1.55em;
+  --body-s: Plus Jakarta Sans · 14px / 400 / 1.5em;
+  --body-l-18px: 20px;
+  --body-m-16px: 16px;
+  --body-s-14px: 14px;
+  --btn-font-size-sm: 14px;
+  --btn-font-size-lg: 20px;
+  --form-label-font-size: 14px;
+  --font-sans: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-2: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-3: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+
+  /* ---------- Spacing ---------- */
+  --display: Plus Jakarta Sans · 60px / 800 / 1.08em;
+  --h1: Plus Jakarta Sans · 48px / 800 / 1.12em;
+  --h2: Plus Jakarta Sans · 36px / 700 / 1.18em;
+  --h3: Plus Jakarta Sans · 28px / 700 / 1.25em;
+  --h4: Plus Jakarta Sans · 22px / 600 / 1.3em;
+  --caption: Plus Jakarta Sans · 12px / 500 / 1.4em;
+  --button: Plus Jakarta Sans · 15px / 600 / 1.2em;
+  --display-60px: 80px;
+  --h1-xl-54px: 48px;
+  --h1-48px: 40px;
+  --h2-36px: 32px;
+  --h3-28px: 28px;
+  --h4-22px: 24px;
+  --h5-20px: 20px;
+  --button-15px: 16px;
+  --caption-12px: 12px;
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --boxed-standard-1280px: 1280px;
+  --boxed-compact-1140px: 1140px;
+  --boxed-wide-1440px: 1440px;
+  --hug-content-auto: 0px;
+  --section-sm-360px: 360px;
+  --section-md-520px: 520px;
+  --hero-lg-680px: 680px;
+  --screen-100vh: 100px;
+  --pill: 999px;
+  --border-0: 0px;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-4: 4px;
+  --border-8: 8px;
+  --none: none;
+  --slate-midnight: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+  --multi-stop-aurora-3-stops: linear-gradient(90deg, #0066FF 0%, #4F46E5 50%, #16A34A 100%);
+  --h6: 16px;
+  --display-2: 72px;
+  --display-3: 64px;
+  --display-4: 56px;
+  --display-6: 40px;
+  --p: 16px;
+  --micro: 10px;
+  --fs-1: 40px;
+  --fs-2: 32px;
+  --fs-3: 28px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+  --p-0: 0px;
+  --p-1: 4px;
+  --p-2: 8px;
+  --p-3: 16px;
+  --p-4: 24px;
+  --p-5: 48px;
+  --m-0: 0px;
+  --m-1: 4px;
+  --m-2: 8px;
+  --m-3: 16px;
+  --m-4: 24px;
+  --m-5: 48px;
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 16px;
+  --gap-4: 24px;
+  --gap-5: 48px;
+  --spacer: 16px;
+  --social-headline: MEET YOUR NEW OBSESSION;
+  --social-offer: $5.99;
+  --social-cta: GET EARLY ACCESS →;
+  --space-10: 10px;
+  --space-18: 18px;
+  --space-20: 20px;
+
+  /* ---------- Radii ---------- */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --rounded-none: 0px;
+  --rounded-sm: 2px;
+  --rounded: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 12px;
+  --rounded-xl: 16px;
+  --rounded-2xl: 24px;
+  --rounded-full: 9999px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+
+  /* ---------- Shadows ---------- */
+  --primary-glow: linear-gradient(135deg, #0066FF 0%, #4F46E5 100%);
+}
+
+/* ========================================================================== */
+/* 2. Layout                                                                  */
+/* ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: clip;
+}
+.dk-export-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.main-vanta-ss26-atelier-t0km3d {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-x: clip;
+  box-sizing: border-box;
+  background-color: #F4F6FB;
+  border: 1px solid #CBD5E1;
+}
+
+.main-vanta-ss26-atelier-t0km3d__header-navbar-1fr0qh3 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-h8j8b3 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__row-bpuge4 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-hero-hero-sqjamz {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-1c6t6yr {
+  /* Overlay: badge overlay anchored over sibling media */
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  width: auto;
+  max-width: calc(100% - 24px);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px 24px 24px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-2g8e7o {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-features-features-t0iwby {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-xt8glq {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__row-6b1ec1 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-showcase-showcase-taii0x {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-1rqhsq1 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__grid-7uye8i {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-k1rhtg {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-kvqawd {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-klqp7e {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-j7soqj {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-section-3-tki3pw {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-104319w {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__grid-1wegm07 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__grid-1g5i3fc {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-section-4-tuhpev {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-1kz9wjj {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__grid-onxxfs {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-fklmvy {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-fam16z {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-f0mfi0 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 16px 16px 16px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-cta-call-to-action-u4hb3u {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-1ymuffe {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__row-toxbd0 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__footer-site-footer-1q99g1 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.main-vanta-ss26-atelier-t0km3d__container-wlfwd5 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  padding: 24px 16px 24px 16px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__row-rv6api {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ========================================================================== */
+/* 3. Typography                                                              */
+/* ========================================================================== */
+.main-vanta-ss26-atelier-t0km3d__nav-link-vanta-ss26-the-ateli-g0a4w1 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+  text-decoration: none;
+}
+
+.main-vanta-ss26-atelier-t0km3d__nav-link-products-about-us-fqaj72 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+  text-decoration: none;
+}
+
+.main-vanta-ss26-atelier-t0km3d__brand-vanta-fgaxi3 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.94vw, 28px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__nav-link-journal-contact-f6bbt4 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+  text-decoration: none;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-ss26-the-atelier-relea-h48jnx {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h1-cloth-that-holds-the-roo-gu8xyy {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(26px, 3.19vw, 46px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-vanta-is-an-independent-gk9c9z {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #94A3B8;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-vanta-ss26-the-ateli-ga9ql0 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-01-flagship-merchandis-dsdbc9 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h1-signature-pieces-limit-didpna {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(22px, 2.78vw, 40px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-outerwear-ec9d88 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-meridian-overcoat-em8yx7 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.39vw, 20px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-limited-run-ew8km6 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-knitwear-f686b5 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-sable-ribbed-turtleneck-fg7s04 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.39vw, 20px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-5-colours-fq7dp3 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-tailoring-g06ze2 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-atelier-trouser-ga6l31 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.39vw, 20px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-made-to-order-c4cjog {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-leather-cec5df {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-corso-leather-loafer-19z9isz {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.39vw, 20px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-hand-finished-19p9x40 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-02-engineering-desig-1aj8q6x {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h1-precision-craft-perfor-1a994hy {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(22px, 2.78vw, 40px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-knitwear-1b37xkv {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h2-sable-ribbed-turtleneck-1at8bvw {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.94vw, 28px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-extra-fine-merino-in-a-d-1bn74yt {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #94A3B8;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-tailoring-1bd7j9u {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h2-atelier-trouser-1c76ccr {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.94vw, 28px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-high-rise-single-pleat-1bx6qns {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #94A3B8;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-03-seasonal-lookbook-hoawju {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h1-signature-editions-edi-hyai8t {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(22px, 2.78vw, 40px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #0B132B;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-outerwear-h4bp5w {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h2-meridian-overcoat-hebauv {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.53vw, 22px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-limited-run-gkchry {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-knitwear-guc3gx {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h2-sable-ribbed-turtleneck-g0dae0 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.53vw, 22px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-extra-fine-merino-in-a-d-gacw2z {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #94A3B8;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-5-colours-fge302 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__badge-tailoring-fqdop1 {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h2-atelier-trouser-1hqd9ml {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(16px, 1.53vw, 22px);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-high-rise-single-pleat-1hgdnxm {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-made-to-order-1h6e28n {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #0F172A;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-ready-for-your-next-ch-1gwegjo {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h1-cloth-that-holds-the-roo-1gmeuup {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(18px, 2.22vw, 32px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-products-about-us-jo-1gcf95q {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'JetBrains Mono', var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #F8FAFC;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__h3-vanta-1g2fngr {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Bricolage Grotesque', var(--font-sans);
+  font-size: clamp(40px, 5.00vw, 72px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.main-vanta-ss26-atelier-t0km3d__p-2027-vanta-all-rights-1fsg1rs {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #94A3B8;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+/* ========================================================================== */
+/* 4. Components                                                              */
+/* ========================================================================== */
+.main-vanta-ss26-atelier-t0km3d__section-bg-couf7w {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #080706;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-1bnaags {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-shop-the-ss26-edit-ewwupr {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-hero-widescreen-cine-cyu0wv {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1268 / 580;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-gauv6m {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-shop-the-ss26-edit-emx90s {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 52px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-see-the-lookbook-fgswlq {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 52px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #F4F6FB;
+  border: 1.5px solid #332C25;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #0B132B;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-1bx9w5r {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #080706;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-ewr8ro {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #080706;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-surface-1c79huq {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-product-card-1-photo-1dv740k {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 270 / 260;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-fqsiap {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-surface-1ch93jp {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #DBEAFE;
+  border: 1px solid #0F172A;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-product-card-2-photo-1e56ppj {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 270 / 260;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-ewtp7s {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-surface-1ajbvow {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-product-card-3-photo-h4to9j {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 270 / 260;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-f6tawr {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__card-surface-1atbhdv {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-product-card-4-photo-guu2kk {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 250 / 260;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-gkrbdm {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-fqq1ul {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #080706;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-e2sfor {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-dsstzs {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #0F172A;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-zigzag-row-1-photo-hosvnh {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 560 / 240;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-guqx2l {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-zigzag-row-2-photo-het9yi {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 536 / 240;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-g0s3zo {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-emrn2p {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #0F172A;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-01-ta-g0v9hn {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 584 / 502;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-1b3b32u {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #14110F;
+  border: 1px solid #332C25;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-02-ph-fqvnso {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 260 / 254;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-garpon {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-1bdaort {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #DBEAFE;
+  border: 1px solid #0F172A;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-03-ph-gkugvl {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 260 / 254;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-view-piece-d8w31y {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #0F172A;
+  border: 1.5px solid #0F172A;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-ecs1dq {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #0F172A;
+  border: 1px solid #0F172A;
+  border-radius: 4px;
+}
+
+.main-vanta-ss26-atelier-t0km3d__button-shop-the-ss26-edit-divoqx {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 56px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+  background-color: #080706;
+  border: 1.5px solid #080706;
+  border-radius: 2px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.main-vanta-ss26-atelier-t0km3d__section-bg-fgqg5m {
+  /* Overlay: full-bleed background surface */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #080706;
+  border: 1px solid #080706;
+}
+
+/* ========================================================================== */
+/* 5. Responsive Overrides                                                    */
+/* ========================================================================== */
+@media (min-width: 768px) {
+  .main-vanta-ss26-atelier-t0km3d__header-navbar-1fr0qh3 {
+    padding: 14px 32px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-h8j8b3 {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-2g8e7o {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-xt8glq {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1rqhsq1 {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__grid-7uye8i {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-k1rhtg {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-kvqawd {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-klqp7e {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-j7soqj {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-104319w {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1kz9wjj {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-fklmvy {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-fam16z {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-f0mfi0 {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1ymuffe {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-wlfwd5 {
+    padding: 24px 24px 24px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-vanta-ss26-atelier-t0km3d {
+    gap: 40px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__header-navbar-1fr0qh3 {
+    padding: 16px 64px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-h8j8b3 {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-hero-widescreen-cine-cyu0wv {
+    max-width: 1268px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-2g8e7o {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-xt8glq {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1rqhsq1 {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__grid-7uye8i {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-k1rhtg {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-product-card-1-photo-1dv740k {
+    max-width: 270px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-kvqawd {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-product-card-2-photo-1e56ppj {
+    max-width: 270px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-klqp7e {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-product-card-3-photo-h4to9j {
+    max-width: 270px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-j7soqj {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-product-card-4-photo-guu2kk {
+    max-width: 250px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-104319w {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-zigzag-row-1-photo-hosvnh {
+    max-width: 560px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-zigzag-row-2-photo-het9yi {
+    max-width: 536px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1kz9wjj {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-fklmvy {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-01-ta-g0v9hn {
+    max-width: 584px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-fam16z {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-02-ph-fqvnso {
+    max-width: 260px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__card-f0mfi0 {
+    padding: 16px 16px 16px 16px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__img-lookbook-plate-03-ph-gkugvl {
+    max-width: 260px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-1ymuffe {
+    padding: 24px 24px 24px 24px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__row-toxbd0 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .main-vanta-ss26-atelier-t0km3d__container-wlfwd5 {
+    padding: 24px 24px 24px 24px;
+  }
+}
+
+/* ========================================================================== */
+/* 6. Utilities                                                               */
+/* ========================================================================== */
+.main-vanta-ss26-atelier-t0km3d img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.main-vanta-ss26-atelier-t0km3d button:focus-visible {
+  outline: 2px solid var(--color-palette-1, #007AFF);
+  outline-offset: 2px;
+}

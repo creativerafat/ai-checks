@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+  "meta": {
+    "sectionName": "main — VANTA — SS26 Atelier",
+    "sourceFrameName": "main — VANTA — SS26 Atelier",
+    "projectId": "file-1793804223377",
+    "generatedAt": "2026-11-25T12:49:09.684Z",
+    "assetFolder": "assets/",
+    "totalAssets": 10
+  },
+  "assets": [
+    {
+      "name": "img (Hero / Widescreen Cine)",
+      "layerId": "ai_wf_node_1795446175526_39453_8",
+      "kind": "image",
+      "originalSize": {
+        "width": 1268,
+        "height": 580,
+        "estimatedBytes": 240000
+      },
+      "sourceUrl": "https://images.pexels.com/photos/6533096/pexels-photo-6533096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-hero-widescreen-cine.png"
+    },
+    {
+      "name": "img (Product Card 1 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_18",
+      "kind": "image",
+      "originalSize": {
+        "width": 270,
+        "height": 260,
+        "estimatedBytes": 31590
+      },
+      "sourceUrl": "https://images.pexels.com/photos/10919370/pexels-photo-10919370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-product-card-1-photo.png"
+    },
+    {
+      "name": "img (Product Card 2 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_19",
+      "kind": "image",
+      "originalSize": {
+        "width": 270,
+        "height": 260,
+        "estimatedBytes": 31590
+      },
+      "sourceUrl": "https://images.pexels.com/photos/4614216/pexels-photo-4614216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-product-card-2-photo.png"
+    },
+    {
+      "name": "img (Product Card 3 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_20",
+      "kind": "image",
+      "originalSize": {
+        "width": 270,
+        "height": 260,
+        "estimatedBytes": 31590
+      },
+      "sourceUrl": "https://images.pexels.com/photos/3060330/pexels-photo-3060330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-product-card-3-photo.png"
+    },
+    {
+      "name": "img (Product Card 4 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_21",
+      "kind": "image",
+      "originalSize": {
+        "width": 250,
+        "height": 260,
+        "estimatedBytes": 29250
+      },
+      "sourceUrl": "https://images.pexels.com/photos/15129894/pexels-photo-15129894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-product-card-4-photo.png"
+    },
+    {
+      "name": "img (Zigzag Row 1 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_22",
+      "kind": "image",
+      "originalSize": {
+        "width": 560,
+        "height": 240,
+        "estimatedBytes": 60480
+      },
+      "sourceUrl": "https://images.pexels.com/photos/4614216/pexels-photo-4614216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-zigzag-row-1-photo.png"
+    },
+    {
+      "name": "img (Zigzag Row 2 / Photo)",
+      "layerId": "ai_wf_node_1795446175526_39453_23",
+      "kind": "image",
+      "originalSize": {
+        "width": 536,
+        "height": 240,
+        "estimatedBytes": 57888
+      },
+      "sourceUrl": "https://images.pexels.com/photos/3060330/pexels-photo-3060330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-zigzag-row-2-photo.png"
+    },
+    {
+      "name": "img (Lookbook / Plate 01 Ta)",
+      "layerId": "ai_wf_node_1795446175526_39453_24",
+      "kind": "image",
+      "originalSize": {
+        "width": 584,
+        "height": 502,
+        "estimatedBytes": 131926
+      },
+      "sourceUrl": "https://images.pexels.com/photos/10919370/pexels-photo-10919370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-lookbook-plate-01-ta.png"
+    },
+    {
+      "name": "img (Lookbook / Plate 02 Ph)",
+      "layerId": "ai_wf_node_1795446175526_39453_25",
+      "kind": "image",
+      "originalSize": {
+        "width": 260,
+        "height": 254,
+        "estimatedBytes": 29718
+      },
+      "sourceUrl": "https://images.pexels.com/photos/4614216/pexels-photo-4614216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-lookbook-plate-02-ph.png"
+    },
+    {
+      "name": "img (Lookbook / Plate 03 Ph)",
+      "layerId": "ai_wf_node_1795446175526_39453_26",
+      "kind": "image",
+      "originalSize": {
+        "width": 260,
+        "height": 254,
+        "estimatedBytes": 29718
+      },
+      "sourceUrl": "https://images.pexels.com/photos/3060330/pexels-photo-3060330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "exportedPath": "assets/img-lookbook-plate-03-ph.png"
+    }
+  ]
+}
